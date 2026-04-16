@@ -1,0 +1,416 @@
+/* ========================
+   Rezept-Seiten Styles
+   ======================== */
+
+.rezept-hero {
+    padding: var(--space-2xl) 0 var(--space-xl);
+    background: linear-gradient(135deg, var(--color-white) 0%, var(--color-cream) 100%);
+}
+
+.rezept-hero-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.rezept-breadcrumb {
+    font-size: 0.9rem;
+    color: var(--color-dark-soft);
+    margin-bottom: var(--space-md);
+}
+
+.rezept-breadcrumb a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.rezept-breadcrumb a:hover {
+    color: var(--color-terracotta);
+}
+
+.rezept-hero h1 {
+    max-width: 800px;
+    margin-bottom: var(--space-md);
+}
+
+.rezept-lead {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: var(--color-dark-soft);
+    font-style: italic;
+    max-width: 700px;
+    margin-bottom: var(--space-xl);
+}
+
+.rezept-meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 2px solid var(--color-sage);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 1rem;
+}
+
+.meta-icon {
+    font-size: 1.5rem;
+}
+
+/* ========================
+   Rezept Content Layout
+   ======================== */
+
+.rezept-content {
+    padding: var(--space-2xl) 0;
+    background-color: var(--color-cream);
+}
+
+.rezept-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: var(--space-2xl);
+}
+
+.rezept-main {
+    background-color: var(--color-white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.rezept-section {
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+    border-bottom: 1px solid rgba(45, 42, 38, 0.1);
+}
+
+.rezept-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.rezept-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-xl);
+    color: var(--color-dark);
+}
+
+/* ========================
+   Zutaten
+   ======================== */
+
+.zutat-kategorie {
+    margin-bottom: var(--space-xl);
+}
+
+.zutat-kategorie:last-child {
+    margin-bottom: 0;
+}
+
+.zutat-kategorie h3 {
+    font-size: 1.4rem;
+    margin-bottom: var(--space-md);
+    color: var(--color-dark);
+    font-weight: 700;
+}
+
+.zutat-kategorie-fleisch h3 {
+    color: var(--color-dark-soft);
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.zutaten-liste {
+    list-style: none;
+}
+
+.zutaten-liste li {
+    padding: var(--space-sm) 0;
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-md);
+    border-bottom: 1px solid rgba(45, 42, 38, 0.05);
+}
+
+.zutaten-liste li:last-child {
+    border-bottom: none;
+}
+
+.zutat-menge {
+    font-weight: 600;
+    color: var(--color-terracotta);
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+.zutat-name {
+    flex: 1;
+    color: var(--color-dark);
+}
+
+.zutat-name em {
+    color: var(--color-dark-soft);
+    font-size: 0.9rem;
+}
+
+.zutat-kategorie-fleisch .zutat-menge {
+    color: var(--color-dark-soft);
+    font-weight: 400;
+}
+
+.zutat-kategorie-fleisch .zutat-name {
+    color: var(--color-dark-soft);
+}
+
+/* ========================
+   Anleitung
+   ======================== */
+
+.anleitung-liste {
+    list-style: none;
+    counter-reset: step-counter;
+}
+
+.anleitung-liste li {
+    counter-increment: step-counter;
+    margin-bottom: var(--space-xl);
+    padding-left: 80px;
+    position: relative;
+}
+
+.anleitung-liste li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-terracotta);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.anleitung-liste li h4 {
+    font-size: 1.3rem;
+    margin-bottom: var(--space-sm);
+    color: var(--color-dark);
+}
+
+.anleitung-liste li p {
+    color: var(--color-dark-soft);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* ========================
+   Bissitarisch Tipp
+   ======================== */
+
+.rezept-tipp {
+    background: linear-gradient(135deg, var(--color-sage-light) 0%, var(--color-sage) 100%);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--color-terracotta);
+}
+
+.rezept-tipp h3 {
+    color: var(--color-white);
+    margin-bottom: var(--space-md);
+    font-size: 1.5rem;
+}
+
+.rezept-tipp p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* ========================
+   Sidebar
+   ======================== */
+
+.rezept-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.sidebar-card {
+    background-color: var(--color-white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--space-md);
+    color: var(--color-dark);
+}
+
+/* Nährwerte */
+.naehrwerte {
+    list-style: none;
+}
+
+.naehrwerte li {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid rgba(45, 42, 38, 0.05);
+}
+
+.naehrwerte li:last-child {
+    border-bottom: none;
+}
+
+.naehrwerte li span:first-child {
+    color: var(--color-dark-soft);
+}
+
+.naehrwerte li strong {
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.naehrwerte-note {
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 2px solid var(--color-sage-light);
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--color-dark-soft);
+    margin-bottom: 0;
+}
+
+/* Variationen */
+.variationen {
+    list-style: none;
+}
+
+.variationen li {
+    padding: var(--space-sm) 0 var(--space-sm) var(--space-lg);
+    position: relative;
+    color: var(--color-dark-soft);
+    line-height: 1.6;
+}
+
+.variationen li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-terracotta);
+    font-weight: 600;
+}
+
+.variationen li strong {
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+/* Mehr Rezepte */
+.mehr-rezepte {
+    list-style: none;
+}
+
+.mehr-rezepte li {
+    margin-bottom: var(--space-sm);
+}
+
+.mehr-rezepte li a {
+    display: block;
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+    transition: background-color 0.3s ease;
+}
+
+.mehr-rezepte li a:hover {
+    background-color: var(--color-cream);
+}
+
+/* ========================
+   Responsive Rezept-Seiten
+   ======================== */
+
+@media (max-width: 968px) {
+    .rezept-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .rezept-sidebar {
+        order: -1;
+    }
+    
+    .sidebar-card {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--space-lg);
+    }
+    
+    .sidebar-card h3 {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .rezept-meta-bar {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .anleitung-liste li {
+        padding-left: 70px;
+    }
+    
+    .anleitung-liste li::before {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    
+    .rezept-main {
+        padding: var(--space-lg);
+    }
+    
+    .sidebar-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .rezept-hero {
+        padding: var(--space-xl) 0 var(--space-lg);
+    }
+    
+    .rezept-lead {
+        font-size: 1.1rem;
+    }
+    
+    .anleitung-liste li {
+        padding-left: 0;
+        padding-top: 60px;
+    }
+    
+    .anleitung-liste li::before {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
