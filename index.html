@@ -3,12 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bissitarisch – Fleisch? Eher Gewürz!</title>
-    <meta name="description" content="Die erste deutsche Flexitarier-Plattform mit Schmäh. Rezepte, bei denen Fleisch endlich mal die Klappe hält.">
+    <title>Rezepte mit wenig Fleisch – Flexitarisch Kochen | bissitarisch</title>
+    <meta name="description" content="Fleischarme Rezepte für jeden Tag: 85-95% pflanzlich, ohne Verzicht. Flexitarisch kochen mit Chili, Bolognese, Pho, Tacos & mehr. Fleisch als Gewürz, nicht als Hauptzutat.">
+    <meta name="keywords" content="rezepte wenig fleisch, flexitarisch kochen, fleischarme rezepte, fleisch reduzieren, fleischlos kochen, fleischalternativen rezepte, weniger fleisch essen">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rezepte mit wenig Fleisch – Flexitarisch Kochen">
+    <meta property="og:description" content="Fleischarme Rezepte: 85-95% pflanzlich, ohne Verzicht. Chili, Bolognese, Pho & mehr.">
+    <meta property="og:image" content="https://bissitarisch.vercel.app/images/chili.jpg">
+    <meta property="og:url" content="https://bissitarisch.de">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bissitarisch.de">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=Literata:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "bissitarisch",
+      "url": "https://bissitarisch.de",
+      "description": "Rezepte mit wenig Fleisch - Flexitarisch kochen ohne Verzicht",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://bissitarisch.de/rezepte.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -72,7 +100,7 @@
                 <!-- Rezept 1 -->
                 <article class="rezept-card rezept-card-featured">
                     <div class="rezept-image">
-                        <img src="images/pho.jpg" alt="Pho mit Geister-Rind" loading="lazy">
+                        <img src="images/pho.jpg" alt="Pho Rezept mit wenig Fleisch - Vietnamesische Suppe 95% fleischfrei" loading="lazy">
                         <span class="rezept-badge">Neu</span>
                     </div>
                     <div class="rezept-content">
@@ -88,7 +116,7 @@
                 <!-- Rezept 2 -->
                 <article class="rezept-card">
                     <div class="rezept-image">
-                        <img src="images/tacos.jpg" alt="Pulled 'Pork' Jackfruit Tacos" loading="lazy">
+                        <img src="images/tacos.jpg" alt="Pulled Pork Tacos mit Jackfruit - Fleischarmes Rezept 90% pflanzlich" loading="lazy">
                     </div>
                     <div class="rezept-content">
                         <h3><a href="tacos.html">Pulled 'Pork' Jackfruit Tacos</a></h3>
@@ -103,7 +131,7 @@
                 <!-- Rezept 3 -->
                 <article class="rezept-card">
                     <div class="rezept-image">
-                        <img src="images/kimchi-rice.jpg" alt="Kimchi-Fried-Rice mit Fleisch-Cameo" loading="lazy">
+                        <img src="images/kimchi-rice.jpg" alt="Kimchi Fried Rice Rezept mit wenig Fleisch - Koreanisch kochen 92% fleischfrei" loading="lazy">
                     </div>
                     <div class="rezept-content">
                         <h3><a href="kimchi-rice.html">Kimchi-Fried-Rice mit Fleisch-Cameo</a></h3>
@@ -178,4 +206,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
